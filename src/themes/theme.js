@@ -16,7 +16,7 @@ export default {
     onBackground: "#b00020",
   },
   breakpoints: {
-    mobile: "only screen and (min-width: 50rem)",
+    desktop: "only screen and (min-width: 50rem)",
   },
   spacings: {
     xxSmall: ".25rem",
