@@ -8,7 +8,7 @@ export default {
     primaryDark: "#0026ca",
     secondaryMain: "#fedf30",
     secondaryLight: "#ffff69",
-    secondarDark: "#c7ae00",
+    secondaryDark: "#c7ae00",
     onPrimary: "#ffffff",
     onSecondary: "#000000",
     error: "#b00020",
