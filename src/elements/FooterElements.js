@@ -6,6 +6,7 @@ export const FooterWrapper = styled.footer`
   grid-row: 19;
   @media ${({ theme }) => theme.breakpoints.desktop} {
     grid-column: 1 / 11;
+    grid-row: 23;
   }
   display: flex;
 `;
