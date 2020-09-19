@@ -7,27 +7,45 @@ import styled from "styled-components";
 export const FeaturedPreviewWrapper = styled.article`
   width: 100;
   display: grid;
-  grid-template-columns: repeat(20, 1fr);
-  grid-template-rows: repeat(12, 2.5rem);
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(16, 1.5rem);
   gap: 0 1rem;
+
+  @media ${({ theme }) => theme.breakpoints.desktop} {
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(12, 2.5rem);
+  }
 `;
 
 export const FeaturedPreviewImageWrapper = styled.div`
-  grid-column: 1 / 15;
+  grid-column: 1 / 7;
   grid-row: 1 / span 12;
+  @media ${({ theme }) => theme.breakpoints.desktop} {
+    grid-column: 1 / 15;
+    grid-row: 1 / span 12;
+  }
 `;
 export const FeaturedPreviewContent = styled.div`
-  grid-column: 13 / 21;
-  grid-row: 2 / span 10;
+  grid-column: 2 / 6;
+  grid-row: 9 / 17;
   z-index: 10;
-  background-color: ${({ theme }) => theme.colors.primaryDark};
+  background-color: ${({ theme }) => theme.colors.primaryLight};
   color: ${({ theme }) => theme.colors.onPrimary};
+  @media ${({ theme }) => theme.breakpoints.desktop} {
+    grid-column: 13 / 21;
+    grid-row: 2 / span 10;
+  }
 `;
 
 export const ColorGapFiller = styled.div`
-  grid-column: 15 / 21;
-  grid-row: 1 / 2;
-  background-color: ${({ theme }) => theme.colors.primaryMain};
+  display: none;
+  @media ${({ theme }) => theme.breakpoints.desktop} {
+    display: block;
+    grid-column: 15 / 21;
+    grid-row: 1 / 2;
+  }
+
+  background-color: ${({ theme }) => theme.colors.primaryDark};
 `;
 
 /*
@@ -45,11 +63,11 @@ will be a link to related blogs, an intro text (excerpt) and a show more button.
 */
 export const ArticlePreviewWrapper = styled.article`
   width: 100%;
-  padding: ${({ theme }) => theme.spacings.small};
-  position: relative;
+  padding: ${({ theme }) => theme.spacings.xSmall};
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
     width: 33%;
+    padding: ${({ theme }) => theme.spacings.medium};
   }
 
   img {
@@ -61,6 +79,7 @@ export const ArticlePreviewWrapper = styled.article`
   }
 `;
 export const ArticlePreviewContainerWrapper = styled.section`
+  margin: ${({ theme }) => theme.spacings.large} 0;
   width: 100%;
   display: flex;
   flex-wrap: wrap;

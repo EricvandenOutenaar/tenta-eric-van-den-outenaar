@@ -1,24 +1,50 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 import {
   HeaderWrapper,
   LogoBlogTitleWrapper,
-  CallToActionWrapper,
+  NavLink,
   NavWrapper,
 } from "../elements";
 
 export const Header = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      logo: file(relativePath: { eq: "logo.svg" }) {
+        publicURL
+      }
+    }
+  `);
   return (
     <HeaderWrapper>
       <LogoBlogTitleWrapper>
-        <h3>Logo and Title</h3>
+        <img src={data.logo.publicURL}></img>
+        <h1>My Travel Blog</h1>
       </LogoBlogTitleWrapper>
       <NavWrapper>
-        <h3>Nav</h3>
+        <ul>
+          <li>
+            <NavLink to="/">
+              <h3>Home</h3>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/">
+              <h3>About me </h3>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/">
+              <h3>Contact</h3>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/">
+              <h3>Sign up</h3>
+            </NavLink>
+          </li>
+        </ul>
       </NavWrapper>
-      <CallToActionWrapper>
-        <h3>Sign up</h3>
-      </CallToActionWrapper>
-      
     </HeaderWrapper>
   );
 };

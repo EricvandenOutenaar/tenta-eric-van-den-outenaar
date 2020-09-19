@@ -2,6 +2,11 @@ import styled from "styled-components";
 
 // to be defined further later
 export const FooterWrapper = styled.footer`
-  width: 100;
+  grid-column: 1 / 7;
+  grid-row: 19;
+  @media ${({ theme }) => theme.breakpoints.desktop} {
+    grid-column: 1 / 11;
+  }
   display: flex;
 `;
+
