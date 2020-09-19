@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const HeaderWrapper = styled.header`
-  background-color: ${({ theme }) => theme.colors.primaryDark};
+  background-color: ${({ theme }) => theme.colors.primaryMain};
+  color: ${({ theme }) => theme.colors.onPrimary};
   grid-column-start: 1;
   grid-column-end: 7;
   grid-row: 1 / 4;
@@ -19,6 +20,4 @@ export const LogoBlogTitleWrapper = styled.div`
 export const CallToActionWrapper = styled.div`
   display: block;
 `;
-export const NavWrapper = styled.nav`
-  background-color: ${({ theme }) => theme.colors.primaryDark};
-`;
+export const NavWrapper = styled.nav``;

@@ -1,17 +1,27 @@
 import React from "react";
-import {
-  ArticlePreviewWrapper,
-} from "../elements";
+import { ArticlePreviewWrapper } from "../elements";
+import Img from "gatsby-image";
 //import { Button } from "../components"
 
-export const ArticlePreview = ({ date, title, excerpt, slug }) => {
+const imageStyle = {
+  width: "100%",
+  //height: "100%",
+};
+
+export const ArticlePreview = ({
+  date,
+  title,
+  excerpt,
+  slug,
+  featureImage,
+}) => {
   return (
-      <ArticlePreviewWrapper>
-        <h2>{title}</h2>
-        <p>{excerpt}</p>
-        <p>{slug}</p>
-        <p>{date}</p>
-      </ArticlePreviewWrapper>
-    
+    <ArticlePreviewWrapper>
+      <Img fixed={featureImage} style={imageStyle} />
+      <h2>{title}</h2>
+      <p>{excerpt}</p>
+      <p>{slug}</p>
+      <p>{date}</p>
+    </ArticlePreviewWrapper>
   );
 };

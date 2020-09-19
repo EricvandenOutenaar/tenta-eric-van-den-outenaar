@@ -43,6 +43,9 @@ const allBlogs = ({ pageContext, data }) => {
                   title={blog.node.frontmatter.title}
                   excerpt={blog.node.frontmatter.excerpt}
                   slug={blog.node.frontmatter.slug}
+                  featureImage={
+                    blog.node.frontmatter.featureImage.childImageSharp.fixed
+                  }
                 ></ArticlePreview>
               )
             );

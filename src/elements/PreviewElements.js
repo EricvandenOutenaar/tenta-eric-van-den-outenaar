@@ -20,13 +20,14 @@ export const FeaturedPreviewContent = styled.div`
   grid-column: 13 / 21;
   grid-row: 2 / span 10;
   z-index: 10;
-  background-color: red;
+  background-color: ${({ theme }) => theme.colors.primaryDark};
+  color: ${({ theme }) => theme.colors.onPrimary};
 `;
 
 export const ColorGapFiller = styled.div`
   grid-column: 15 / 21;
   grid-row: 1 / 2;
-  background-color: ${({ theme }) => theme.colors.primaryDark};
+  background-color: ${({ theme }) => theme.colors.primaryMain};
 `;
 
 /*
