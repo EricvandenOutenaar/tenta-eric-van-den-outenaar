@@ -4,3 +4,4 @@ export * from "./ImageElements";
 export * from "./ContentElements";
 export * from "./FooterElements";
 export * from "./PreviewElements";
+export * from "./ButtonElements";

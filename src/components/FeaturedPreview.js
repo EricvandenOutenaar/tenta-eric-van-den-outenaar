@@ -7,6 +7,7 @@ import {
   FeaturedPreviewContent,
   ColorGapFiller,
 } from "../elements";
+import { Button } from "../components";
 
 const imageStyle = {
   width: "100%",
@@ -29,11 +30,9 @@ export const FeaturedPreview = ({
         <h2>{title}</h2>
         <p>{excerpt}</p>
         <p>{date}</p>
-        <p>{slug}</p>
+        <Button href={slug}>Show more</Button>
       </FeaturedPreviewContent>
       <ColorGapFiller />
     </FeaturedPreviewWrapper>
   );
 };
-
-
