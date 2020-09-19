@@ -14,7 +14,7 @@ export const HeaderWrapper = styled.header`
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
     grid-column: 1 / span 10;
-    grid-row: 1 / 5;
+  grid-row: 1 / ${({ halveSize }) => halveSize ? 4 : 5};
   }
 `;
 
@@ -30,6 +30,7 @@ export const LogoBlogTitleWrapper = styled.div`
     font-size: 4.5rem;
     font-weight: 200;
     padding: ${({ theme }) => theme.spacings.large} 0 0 0;
+    display: ${({ hideTitle }) => (hideTitle ? "none" : "block")};
   }
 `;
 
@@ -38,7 +39,7 @@ export const NavWrapper = styled.nav`
   ul {
     display: flex;
     list-style: none;
-    justify-content: space-between
+    justify-content: space-between;
   }
   @media ${({ theme }) => theme.breakpoints.desktop} {
     ul {

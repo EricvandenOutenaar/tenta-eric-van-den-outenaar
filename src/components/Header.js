@@ -7,7 +7,7 @@ import {
   NavWrapper,
 } from "../elements";
 
-export const Header = () => {
+export const Header = ({ hideTitle, halveSize}) => {
   const data = useStaticQuery(graphql`
     query {
       logo: file(relativePath: { eq: "logo.svg" }) {
@@ -16,8 +16,8 @@ export const Header = () => {
     }
   `);
   return (
-    <HeaderWrapper>
-      <LogoBlogTitleWrapper>
+    <HeaderWrapper halveSize={halveSize}>
+      <LogoBlogTitleWrapper hideTitle={hideTitle} >
         <img src={data.logo.publicURL}></img>
         <h1>My Travel Blog</h1>
       </LogoBlogTitleWrapper>

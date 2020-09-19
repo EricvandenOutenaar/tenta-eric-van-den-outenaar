@@ -6,3 +6,4 @@ export * from "./Footer";
 export * from "./FeaturedPreview";
 export * from "./ArticlePreview";
 export * from "./ArticlePreviewContainer";
+export * from "./Article";
