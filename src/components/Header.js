@@ -7,7 +7,7 @@ import {
   NavWrapper,
 } from "../elements";
 
-export const Header = ({ hideTitle, halveSize}) => {
+export const Header = ({ hideTitle, smallHeader}) => {
   const [showDropdown, setShowDropdown] = useState(false);
   console.log('test', showDropdown);
   const data = useStaticQuery(graphql`
@@ -18,7 +18,7 @@ export const Header = ({ hideTitle, halveSize}) => {
     }
   `);
   return (
-    <HeaderWrapper halveSize={halveSize} dropdown={showDropdown}>
+    <HeaderWrapper smallHeader={smallHeader} dropdown={showDropdown}>
       <LogoBlogTitleWrapper hideTitle={hideTitle} >
         <img src={data.logo.publicURL}></img>
         <h1>My Travel Blog</h1>

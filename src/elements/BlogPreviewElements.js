@@ -61,7 +61,7 @@ on the homepage
 A preview article will consist out of an image, a header a topics icon, which 
 will be a link to related blogs, an intro text (excerpt) and a show more button. 
 */
-export const ArticlePreviewWrapper = styled.article`
+export const BlogPreviewWrapper = styled.article`
   width: 100%;
   padding: ${({ theme }) => theme.spacings.xSmall};
 
@@ -78,7 +78,7 @@ export const ArticlePreviewWrapper = styled.article`
     left: 0;
   }
 `;
-export const ArticlePreviewContainerWrapper = styled.section`
+export const BlogPreviewContainerWrapper = styled.section`
   margin: ${({ theme }) => theme.spacings.large} 0;
   width: 100%;
   display: flex;

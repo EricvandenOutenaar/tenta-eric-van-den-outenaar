@@ -15,7 +15,7 @@ export const HeaderWrapper = styled.header`
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
     grid-column: 1 / span 10;
-    grid-row: 1 / ${({ halveSize }) => (halveSize ? 4 : 5)};
+    grid-row: 1 / ${({ smallHeader }) => (smallHeader ? 3 : 5)};
   }
 `;
 

@@ -7,14 +7,14 @@ import {
   FeaturedPreviewContent,
   ColorGapFiller,
 } from "../elements";
-import { Button } from "../components";
+import { Button } from ".";
 
 const imageStyle = {
   width: "100%",
   height: "100%",
 };
 
-export const FeaturedPreview = ({
+export const FeaturedBlogPreview = ({
   featureImage,
   date,
   title,

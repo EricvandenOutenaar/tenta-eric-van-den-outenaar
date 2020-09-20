@@ -1,27 +1,26 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { Content, Layout, Article } from "../components";
+import { MainContentContainer, Layout, Blog } from "../components";
 
 const singleBlog = ({ data }) => {
-  const {
-    featureImage,
-  } = data.mdx.frontmatter.featureImage.childImageSharp.fixed;
+  const featureImage = data.mdx.frontmatter.featureImage.childImageSharp.fixed;
   const {
     frontmatter: { title, excerpt, date },
     body,
   } = data.mdx;
 
+  console.log("test", featureImage, "test");
   return (
-    <Layout hideTitle halveSize>
-      <Content>
-        <Article
+    <Layout hideTitle smallHeader>
+      <MainContentContainer>
+        <Blog
           fixed={featureImage}
           title={title}
           excerpt={excerpt}
           date={date}
           article={body}
         />
-      </Content>
+      </MainContentContainer>
     </Layout>
   );
 };
@@ -29,7 +28,7 @@ const singleBlog = ({ data }) => {
 export default singleBlog;
 
 export const pageQuery = graphql`
-  query SingleBlogQuery($id: String!) {
+  query SinglePostQuery($id: String!) {
     mdx(id: { eq: $id }) {
       body
       frontmatter {

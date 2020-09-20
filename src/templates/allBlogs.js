@@ -2,10 +2,10 @@ import React from "react";
 import { graphql } from "gatsby";
 import {
   Layout,
-  Content,
-  FeaturedPreview,
-  ArticlePreview,
-  ArticlePreviewContainer,
+  MainContentContainer,
+  FeaturedBlogPreview,
+  BlogPreview,
+  BlogPreviewContainer,
 } from "../components";
 
 const allBlogs = ({ pageContext, data }) => {
@@ -23,8 +23,8 @@ const allBlogs = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <Content>
-        <FeaturedPreview
+      <MainContentContainer>
+        <FeaturedBlogPreview
           key={blogs[0].node.frontmatter.slug}
           date={blogs[0].node.frontmatter.date}
           title={blogs[0].node.frontmatter.title}
@@ -34,11 +34,11 @@ const allBlogs = ({ pageContext, data }) => {
             blogs[0].node.frontmatter.featureImage.childImageSharp.fixed
           }
         />
-        <ArticlePreviewContainer>
+        <BlogPreviewContainer>
           {blogs.map((blog, index) => {
             return (
               index !== 0 && (
-                <ArticlePreview
+                <BlogPreview
                   date={blog.node.frontmatter.date}
                   title={blog.node.frontmatter.title}
                   excerpt={blog.node.frontmatter.excerpt}
@@ -46,12 +46,12 @@ const allBlogs = ({ pageContext, data }) => {
                   featureImage={
                     blog.node.frontmatter.featureImage.childImageSharp.fixed
                   }
-                ></ArticlePreview>
+                ></BlogPreview>
               )
             );
           })}
-        </ArticlePreviewContainer>
-      </Content>
+        </BlogPreviewContainer>
+      </MainContentContainer>
     </Layout>
   );
 };

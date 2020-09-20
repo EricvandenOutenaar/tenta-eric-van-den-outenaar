@@ -2,7 +2,6 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import {
   FooterWrapper,
-  FooterSocialWrapper,
   FooterSocialIcons,
 } from "../elements"
 
