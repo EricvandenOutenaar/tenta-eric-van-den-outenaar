@@ -1,6 +1,7 @@
 export default {
   fonts: {
-    main: "Roboto, Helvetica, Arial, sans-serif",
+    main: "lato, sans-serif",
+    code: "Roboto Mono, monospace",
   },
   colors: {
     primaryMain: "#0448a2",
