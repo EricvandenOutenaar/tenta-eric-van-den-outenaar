@@ -29,7 +29,7 @@ export const FeaturedPreviewContent = styled.div`
   grid-column: 2 / 6;
   grid-row: 9 / 17;
   z-index: 10;
-  background-color: ${({ theme }) => theme.colors.primaryLight};
+  background-color: ${({ theme }) => theme.colors.primaryMain};
   color: ${({ theme }) => theme.colors.onPrimary};
   @media ${({ theme }) => theme.breakpoints.desktop} {
     grid-column: 13 / 21;
@@ -45,7 +45,7 @@ export const ColorGapFiller = styled.div`
     grid-row: 1 / 2;
   }
 
-  background-color: ${({ theme }) => theme.colors.primaryDark};
+  background-color: ${({ theme }) => theme.colors.backgroundGrey};
 `;
 
 /*

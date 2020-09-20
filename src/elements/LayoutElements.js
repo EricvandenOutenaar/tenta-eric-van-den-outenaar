@@ -9,7 +9,7 @@ export const LayoutWrapper = styled.div`
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
     grid-template-columns: 1fr repeat(8, minmax(9rem, auto)) 1fr;
-    grid-template-rows: 4rem repeat(25, 5rem);
+    grid-template-rows: 4rem repeat(23, 5rem) auto;
     gap: 0 0.8rem;
   }
 `;

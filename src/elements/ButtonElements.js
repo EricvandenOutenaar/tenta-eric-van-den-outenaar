@@ -4,8 +4,8 @@ import { Link } from "gatsby";
 
 // maybe make this a bit more my own
 export const ButtonWrapper = styled(props => <Link {...props} />)`
+  display: block;
   padding: 0.5rem 0.75rem;
-  margin-top: ${({ theme }) => theme.spacings.medium};
   background-color: ${({ theme }) => theme.colors.secondaryMain};
   border-radius: 0.5rem;
   color: ${({ theme }) => theme.colors.onSecondary};

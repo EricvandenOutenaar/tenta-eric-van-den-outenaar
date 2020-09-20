@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import {
   HeaderWrapper,
@@ -8,6 +8,8 @@ import {
 } from "../elements";
 
 export const Header = ({ hideTitle, halveSize}) => {
+  const [showDropdown, setShowDropdown] = useState(false);
+  console.log('test', showDropdown);
   const data = useStaticQuery(graphql`
     query {
       logo: file(relativePath: { eq: "logo.svg" }) {
@@ -16,12 +18,12 @@ export const Header = ({ hideTitle, halveSize}) => {
     }
   `);
   return (
-    <HeaderWrapper halveSize={halveSize}>
+    <HeaderWrapper halveSize={halveSize} dropdown={showDropdown}>
       <LogoBlogTitleWrapper hideTitle={hideTitle} >
         <img src={data.logo.publicURL}></img>
         <h1>My Travel Blog</h1>
       </LogoBlogTitleWrapper>
-      <NavWrapper>
+      <NavWrapper dropdown={showDropdown}>
         <ul>
           <li>
             <NavLink to="/">
@@ -45,6 +47,8 @@ export const Header = ({ hideTitle, halveSize}) => {
           </li>
         </ul>
       </NavWrapper>
+      <button  onClick={()=> setShowDropdown(true)}>Menu</button>
+      <button style={{display: !showDropdown && "none"}} onClick={()=>setShowDropdown(false)}>X</button>
     </HeaderWrapper>
   );
 };
