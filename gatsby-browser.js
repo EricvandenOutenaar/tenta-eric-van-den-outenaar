@@ -2,7 +2,11 @@ import React from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import Theme from "./src/themes/theme";
 import { MDXProvider } from "@mdx-js/react";
-import { Table } from "./src/components";
+import { preToCodeBlock } from "mdx-utils";
+import "./language-tabs.css";
+
+
+import { Table, Code } from "./src/components";
 
 const components = {
   table: Table,

@@ -9,3 +9,4 @@ export * from "./BlogPreviewContainer";
 export * from "./Button";
 export * from "./Blog";
 export * from "./Table";
+export * from "./Code";
