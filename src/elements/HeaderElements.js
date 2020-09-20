@@ -26,6 +26,7 @@ export const LogoBlogTitleWrapper = styled.div`
   }
   @media ${({ theme }) => theme.breakpoints.desktop} {
     display: block;
+    width: 40%;
   }
   h1 {
     font-size: 4.5rem;
@@ -38,13 +39,16 @@ export const LogoBlogTitleWrapper = styled.div`
 export const NavWrapper = styled.nav`
   flex-grow: 1;
   ul {
-    display: flex;
+    display: ${({ dropdown }) => !dropdown ? "none" : "flex"};
     flex-direction: ${({ dropdown }) => dropdown && "column"};
     list-style: none;
     justify-content: space-between;
+    align-items: ${({ dropdown }) => dropdown && "center"};
   }
+  
   @media ${({ theme }) => theme.breakpoints.desktop} {
     ul {
+      display: flex; 
       flex-direction: row;
       justify-content: space-between;
     }
@@ -59,4 +63,13 @@ export const NavWrapper = styled.nav`
 export const NavLink = styled(props => <Link {...props} />)`
   color: ${({ theme }) => theme.colors.onBackground};
   text-decoration: none;
+`;
+
+export const DropdownButtonWrapper = styled.button`
+  width: 2rem;
+  height: 2rem;
+
+  @media ${({ theme }) => theme.breakpoints.desktop} {
+    display: none;
+  }
 `;
