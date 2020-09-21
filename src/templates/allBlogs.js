@@ -6,6 +6,7 @@ import {
   FeaturedBlogPreview,
   BlogPreview,
   BlogPreviewContainer,
+  Seo,
 } from "../components";
 
 const allBlogs = ({ pageContext, data }) => {
@@ -23,6 +24,7 @@ const allBlogs = ({ pageContext, data }) => {
 
   return (
     <Layout>
+       <Seo />
       <MainContentContainer>
         <FeaturedBlogPreview
           key={blogs[0].node.frontmatter.slug}

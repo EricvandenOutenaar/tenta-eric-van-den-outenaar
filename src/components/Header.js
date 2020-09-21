@@ -27,7 +27,7 @@ export const Header = ({ hideTitle, smallHeader }) => {
     <HeaderWrapper smallHeader={smallHeader} dropdown={showDropdown}>
       <LogoBlogTitleWrapper hideTitle={hideTitle}>
         <img src={data.logo.publicURL}></img>
-        <h1>My Travel Blog</h1>
+        <h1>My Test Travel Blog</h1>
       </LogoBlogTitleWrapper>
       <NavWrapper dropdown={showDropdown}>
         <ul>
