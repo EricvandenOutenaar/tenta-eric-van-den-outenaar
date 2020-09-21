@@ -1,12 +1,10 @@
 import React from "react";
-import { Layout, Content, FeaturedPreview } from "../components";
+import { Layout, MainContentContainer} from "../components";
 
 export default function Home() {
   return (
     <Layout>
-      <Content>
-        <FeaturedPreview />
-      </Content>
+      <MainContentContainer/>
     </Layout>
   );
 }
