@@ -8,6 +8,7 @@ const imageStyle = {
   display: "block",
 };
 
+
 export const Blog = ({ date, title, excerpt, fixed, article }) => {
   return (
     <BlogWrapper>
