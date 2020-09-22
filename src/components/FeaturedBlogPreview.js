@@ -6,6 +6,7 @@ import {
   FeaturedPreviewImageWrapper,
   FeaturedPreviewContent,
   ColorGapFiller,
+  Typography,
 } from "../elements";
 import { Button } from ".";
 
@@ -27,9 +28,11 @@ export const FeaturedBlogPreview = ({
         <Img fixed={featureImage} style={imageStyle} />
       </FeaturedPreviewImageWrapper>
       <FeaturedPreviewContent>
-        <h2>{title}</h2>
-        <p>{excerpt}</p>
-        <p>{date}</p>
+        <Typography type="h2" area="featurePreview">
+          {title}
+        </Typography>
+        <Typography area="featurePreview">{date}</Typography>
+        <Typography area="featurePreview">{excerpt}</Typography>
         <Button href={slug}>Show more</Button>
       </FeaturedPreviewContent>
       <ColorGapFiller />

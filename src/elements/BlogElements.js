@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const BlogWrapper = styled.div`
   width: 60%;

@@ -14,8 +14,8 @@ export const HeaderWrapper = styled.header`
   z-index: ${({ dropdown }) => dropdown && 50};
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
-    grid-column: 1 / span 10;
-    grid-row: 1 / ${({ smallHeader }) => (smallHeader ? 5 : 5)};
+    grid-column: 1 / span 13;
+    grid-row: 1 / ${({ smallHeader }) => (smallHeader ? 5 : 6)};
   }
 `;
 
@@ -37,18 +37,19 @@ export const LogoBlogTitleWrapper = styled.div`
 `;
 
 export const NavWrapper = styled.nav`
+  padding: ${({ theme: { spacings } }) => spacings.large};
   flex-grow: 1;
   ul {
-    display: ${({ dropdown }) => !dropdown ? "none" : "flex"};
+    display: ${({ dropdown }) => (!dropdown ? "none" : "flex")};
     flex-direction: ${({ dropdown }) => dropdown && "column"};
     list-style: none;
     justify-content: space-between;
     align-items: ${({ dropdown }) => dropdown && "center"};
   }
-  
+
   @media ${({ theme }) => theme.breakpoints.desktop} {
     ul {
-      display: flex; 
+      display: flex;
       flex-direction: row;
       justify-content: space-between;
     }

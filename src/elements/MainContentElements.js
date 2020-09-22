@@ -1,17 +1,14 @@
 import styled from "styled-components";
 
 export const MainContentWrapper = styled.main`
-  grid-column-start: 1;
-  grid-column-end: 7;
-  grid-row-start: 3;
-  grid-row-end: 19;
+  grid-column: 1 / 7;
+  grid-row: 3 / span 18;
   padding: ${({ theme }) => theme.spacings.xxSmall};
   z-index: 1;
-  
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
-    grid-row-start: 4;
-    grid-column-end: 11;
+    grid-column: 2 / 12;
+    grid-row: 4 / span 19;
     padding: ${({ theme }) => theme.spacings.small};
   }
 `;

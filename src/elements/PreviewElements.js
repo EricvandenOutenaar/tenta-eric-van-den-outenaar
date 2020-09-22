@@ -25,15 +25,23 @@ export const FeaturedPreviewImageWrapper = styled.div`
     grid-row: 1 / span 12;
   }
 `;
+// note: I set overflow to hidden to deal with overflow problem on small screen sizes...
 export const FeaturedPreviewContent = styled.div`
   grid-column: 2 / 6;
   grid-row: 9 / 17;
   z-index: 10;
+  overflow: hidden;
+  padding: ${({ theme }) => theme.spacings.medium};
   background-color: ${({ theme }) => theme.colors.primaryMain};
   color: ${({ theme }) => theme.colors.onPrimary};
+
+  p,
+  h2 {
+    padding: ${({ theme }) => theme.spacings.extraSmall} 0;
+  }
   @media ${({ theme }) => theme.breakpoints.desktop} {
     grid-column: 13 / 21;
-    grid-row: 2 / span 10;
+    grid-row: 3 / 11;
   }
 `;
 
@@ -63,13 +71,16 @@ will be a link to related blogs, an intro text (excerpt) and a show more button.
 */
 export const BlogPreviewWrapper = styled.article`
   width: 100%;
-  padding: ${({ theme }) => theme.spacings.xSmall};
-
   @media ${({ theme }) => theme.breakpoints.desktop} {
-    width: 33%;
-    padding: ${({ theme }) => theme.spacings.medium};
+    width: 50%;
+    margin: ${({ theme }) => theme.spacings.large} auto 0;
+    padding: ${({ theme }) => theme.spacings.large}
+      ${({ theme }) => theme.spacings.extraLarge};
   }
-
+  p,
+  h2 {
+    padding: ${({ theme }) => theme.spacings.small} 0;
+  }
   img {
     width: 100%;
     display: block;
@@ -79,8 +90,8 @@ export const BlogPreviewWrapper = styled.article`
   }
 `;
 export const BlogPreviewContainerWrapper = styled.section`
-  margin: ${({ theme }) => theme.spacings.large} 0;
-  width: 100%;
+  margin: ${({ theme }) => theme.spacings.extraLarge} auto;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
 `;
