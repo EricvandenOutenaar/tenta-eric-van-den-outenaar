@@ -4,6 +4,7 @@ import { Link } from "gatsby";
 
 export const PaginationWrapper = styled.div`
   grid-column: 1 / span 7;
+  grid-row: 21 /23;
   padding: 3rem 0;
   display: flex;
   align-items: center;

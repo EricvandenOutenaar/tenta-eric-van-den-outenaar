@@ -1,5 +1,5 @@
-import React from "react"
-import { PaginationWrapper, PaginationElement } from "../elements"
+import React from "react";
+import { PaginationWrapper, PaginationElement } from "../elements";
 
 export const Pagination = ({ isFirst, isLast, prevPage, nextPage }) => {
   return (
@@ -7,5 +7,5 @@ export const Pagination = ({ isFirst, isLast, prevPage, nextPage }) => {
       <PaginationElement to={prevPage}>Previous Page</PaginationElement>
       <PaginationElement to={nextPage}>Next Page</PaginationElement>
     </PaginationWrapper>
-  )
-}
+  );
+};
