@@ -8,7 +8,7 @@ export const MainContentWrapper = styled.main`
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
     grid-column: 2 / 12;
-    grid-row: 4 / span 19;
+    grid-row: 4 / span 17;
     padding: ${({ theme }) => theme.spacings.small};
   }
 `;

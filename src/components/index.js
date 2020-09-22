@@ -11,3 +11,4 @@ export * from "./Blog";
 export * from "./Table";
 export * from "./Code";
 export * from "./Seo";
+export * from "./Pagination";

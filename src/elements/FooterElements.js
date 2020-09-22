@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-// to be defined further later
+// I have given the footer some margin on top and bottom, to push it away from MainContentContainer and create bottom space
 export const FooterWrapper = styled.footer`
   grid-column: 1 / 7;
   grid-row: 23 / span 3;
@@ -17,7 +17,6 @@ export const FooterWrapper = styled.footer`
 
 export const FooterSocialIcons = styled.div`
   margin-bottom: 2rem;
-
   img {
     height: 22px;
     padding: 0 1rem;

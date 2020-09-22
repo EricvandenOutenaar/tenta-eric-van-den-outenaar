@@ -7,16 +7,16 @@ import {
   BlogPreview,
   BlogPreviewContainer,
   Seo,
+  Pagination,
 } from "../components";
 
 const allBlogs = ({ pageContext, data }) => {
-  /*
-    const { currentPage, numPages } = pageContext
-    const isFirst = currentPage === 1
-    const isLast = currentPage === numPages
-    const prevPage = currentPage - 1 === 1 ? "/" : `/${currentPage - 1}`
-    const nextPage = `/${currentPage + 1}`
-   */
+  const { currentPage, numPages } = pageContext;
+  const isFirst = currentPage === 1;
+  const isLast = currentPage === numPages;
+  const prevPage = currentPage - 1 === 1 ? "/" : `/${currentPage - 1}`;
+  const nextPage = `/${currentPage + 1}`;
+
   const blogs = data.allMdx.edges;
 
   // test
@@ -24,7 +24,7 @@ const allBlogs = ({ pageContext, data }) => {
 
   return (
     <Layout>
-       <Seo />
+      <Seo />
       <MainContentContainer>
         <FeaturedBlogPreview
           key={blogs[0].node.frontmatter.slug}
@@ -54,6 +54,12 @@ const allBlogs = ({ pageContext, data }) => {
           })}
         </BlogPreviewContainer>
       </MainContentContainer>
+      <Pagination
+        isFirst={isFirst}
+        isLast={isLast}
+        prevPage={prevPage}
+        nextPage={nextPage}
+      />
     </Layout>
   );
 };
