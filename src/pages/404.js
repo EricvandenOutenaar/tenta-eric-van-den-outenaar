@@ -5,7 +5,7 @@ import { MainContentContainer} from "../components";
 
 /* 
 I have just put the 404 content in a the MainContentContainer. 
-In that way, it will be wrapped by a main element... 
+In that way, it will be wrapped by the semantic main element... 
 */
 
 const notFound = ({ data }) => {

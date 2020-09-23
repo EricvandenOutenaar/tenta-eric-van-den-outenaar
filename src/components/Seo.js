@@ -2,6 +2,11 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 
+/*
+  This component I have implemented straight from our class project 
+  I have adjusted the url of course and changed one of the keywords.
+*/
+
 export const Seo = ({ description, keywords, title, image, url, author }) => {
   const site = "https://tenta-eric-van-den-outenaar.netlify.app/"
 
