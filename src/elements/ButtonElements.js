@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 
-// maybe make this a bit more my own
+// Here I define the styling of the show more buttons
 export const ButtonWrapper = styled(props => <Link {...props} />)`
   display: block;
   margin: ${({ theme }) => theme.spacings.small} 0;

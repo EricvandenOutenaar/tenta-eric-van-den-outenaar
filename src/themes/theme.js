@@ -3,6 +3,7 @@ export default {
     main: "lato, sans-serif",
     code: "Roboto Mono, monospace",
   },
+  // The colors scheme I have develop with the color picker tool of the material.io website 
   colors: {
     primaryMain: "#01589b",
     primaryLight: "#4f84cc",
@@ -50,5 +51,40 @@ export default {
   fontWeight: {
     normal: 400,
     bold: 700,
+  },
+  /*
+   For each font size I define a normal and large variant 
+   In the styled Typography component we will reference these key value pairs
+   Large is normal with a factor 1.5 in all cases except the h1 (factor 1.7) 
+   */
+   fontSize: {
+    h1: {
+      normal: "2.5rem",
+      large: "4.25rem",
+    },
+    h2: {
+      normal: "2rem",
+      large: "3rem",
+    },
+    h3: {
+      normal: "1.75rem",
+      large: "2.6rem",
+    },
+    h4: {
+      normal: "1.5rem",
+      large: "2.25.6rem",
+    },
+    h5: {
+      normal: "1.25rem",
+      large: "1.9rem",
+    },
+    h6: {
+      normal: "1rem",
+      large: "1.5rem",
+    },
+    p: {
+      normal: "1rem",
+      large: "1.5rem",
+    },
   },
 };

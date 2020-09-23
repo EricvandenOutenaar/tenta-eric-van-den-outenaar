@@ -7,7 +7,7 @@ import styled from "styled-components";
  */
 const getTypographyElement = ({ type, props }) => {
   switch (type) {
-    case "text":
+    case "p":
       return <p {...props} />;
     case "h1":
       return <h1 {...props} />;
@@ -21,19 +21,21 @@ const getTypographyElement = ({ type, props }) => {
       return <h5 {...props} />;
     case "h6":
       return <h6 {...props} />;
-    case "subtitle":
-      return <h2 {...props} />;
     default:
       return <p {...props} />;
   }
 };
 
 /* 
- Were we create the styled typography component based on the provided type prop
- I only want to give the H1 some margin for now and I have created the option
- to easily set an italic fontstyle by passing in a boolean called italic. 
- Also created logic for changing the color based on the background area. By passing props we make it possible to pass
- through the inline styles...     
+ Here I have defined a styled typography component mainly based on a provided prop called 'type'.
+ I have created the option
+ to easily set an italic fontstyle by passing in a boolean called italic. In addition, I have created
+ the option to set the font weight to bold and to manipulate the fontsize. By giving the type and size
+ props default values, we take into account that the user of our Typography component doesn't have to define certain values.
+ In this case the default type is a p element and the default size is normal. If no props are provided our component 
+ will reference ket value pair in the theme.js file associated with normal font size of the p element.   
+ I also created logic for changing the color based on the background area. In addition, I have also built in the option to pass
+ in any other inline styles through to the component. 
 */
 export const Typography = styled(props =>
   getTypographyElement({ type: props.type, props })
@@ -43,6 +45,8 @@ export const Typography = styled(props =>
     0 0
     ${({ theme: { spacings }, area = "-" }) =>
       area === "header" ? spacings.large : "0"};
+  font-size: ${({ theme, type = "p", size = "normal" }) =>
+    theme.fontSize[type][size]};
 
   font-style: ${({ italic }) => italic && "italic"};
   font-weight: ${({ theme: { fontWeight }, bold }) =>
@@ -63,7 +67,7 @@ export const Typography = styled(props =>
       case "footer":
         return colors.onBackground;
       default:
-        return colors.error;
+        return colors.onBackgroundPaper;
     }
   }};
 `;

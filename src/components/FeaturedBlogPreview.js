@@ -1,6 +1,6 @@
 import React from "react";
 import Img from "gatsby-image";
-// import { useStaticQuery, graphql } from "gatsby";
+
 import {
   FeaturedPreviewWrapper,
   FeaturedPreviewImageWrapper,
@@ -28,7 +28,7 @@ export const FeaturedBlogPreview = ({
         <Img fixed={featureImage} style={imageStyle} />
       </FeaturedPreviewImageWrapper>
       <FeaturedPreviewContent>
-        <Typography type="h2" area="featurePreview">
+        <Typography type="h3" area="featurePreview">
           {title}
         </Typography>
         <Typography area="featurePreview">{date}</Typography>

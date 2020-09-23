@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-// this serves as a wrapper for the featured article in main
-//export const FeaturedCWrapper = styled.section``;
+// this serves as a wrapper for the preview of the featured article in main
+// export const FeaturedCWrapper = styled.section``;
 
 // the featured article will be a grid item for an image and a content card
 export const FeaturedPreviewWrapper = styled.article`

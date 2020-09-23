@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import { MainContentContainer} from "../components";
+import { Typography} from "../elements";
 
 /* 
 I have just put the 404 content in a the MainContentContainer. 
@@ -14,7 +15,7 @@ const notFound = ({ data }) => {
   return (
     <MainContentContainer>
       <Img fixed={featureImage} style={{ width: "100vw", height: "40rem" }} />
-      <h1>Uh-oh... What you're looking for could not be found</h1>
+      <Typography type="h1">Uh-oh... What you're looking for could not be found</Typography>
     </MainContentContainer>
   );
 };

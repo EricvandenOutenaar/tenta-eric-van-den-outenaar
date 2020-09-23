@@ -1,22 +1,21 @@
 import React from "react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import Img from "gatsby-image";
-import {BlogWrapper} from "../elements";
+import { BlogWrapper, Typography } from "../elements";
 
 const imageStyle = {
   width: "100%",
   display: "block",
 };
-
-
+// I have put the MDX renderer in the blog component, to keep the single blog template 'cleaner'
 export const Blog = ({ date, title, excerpt, fixed, article }) => {
   return (
     <BlogWrapper>
-      <h1>{title}</h1>
-      <p>{date}</p>
+      <Typography type="h1">{title}</Typography>
+      <Typography type="p">{date}</Typography>
       <Img fixed={fixed} style={imageStyle} />
-      <p>{excerpt}</p>
+      <Typography>{excerpt}</Typography>
       <MDXRenderer>{article}</MDXRenderer>
-    </BlogWrapper> 
+    </BlogWrapper>
   );
 };
