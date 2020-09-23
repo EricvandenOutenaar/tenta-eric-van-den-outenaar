@@ -1,9 +1,17 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
+/* 
+  from tablet breakpoint and up I decreased the width of the blog wrapper and
+  set margin to auto, in order to keep the container centered
+*/
 export const BlogWrapper = styled.div`
-  width: 60%;
-  margin: auto;
-  background-color: ${({theme})=> theme.colors.background};
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors.background};
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    width: 70%;
+    margin: auto;
+  }
 
   h1,
   h2,

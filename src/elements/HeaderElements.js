@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 
 export const HeaderWrapper = styled.header`
-  background-color: ${({ theme }) => theme.colors.backgroundGrey};
+  background-color: ${({ theme }) => theme.colors.primaryLight};
   padding: ${({ theme }) => theme.spacings.small};
   color: ${({ theme }) => theme.colors.onBackground};
   grid-column-start: 1;
@@ -30,7 +30,6 @@ export const LogoBlogTitleWrapper = styled.div`
   }
   h1 {
     font-size: 4.5rem;
-    font-weight: 200;
     padding: ${({ theme }) => theme.spacings.large} 0 0 0;
     display: ${({ hideTitle }) => (hideTitle ? "none" : "block")};
   }

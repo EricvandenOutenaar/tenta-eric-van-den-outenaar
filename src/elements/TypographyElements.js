@@ -45,6 +45,8 @@ export const Typography = styled(props =>
       area === "header" ? spacings.large : "0"};
 
   font-style: ${({ italic }) => italic && "italic"};
+  font-weight: ${({ theme: { fontWeight }, bold }) =>
+    bold ? fontWeight.bold : fontWeight.normal};
 
   color: ${({ theme: { colors }, area }) => {
     switch (area) {

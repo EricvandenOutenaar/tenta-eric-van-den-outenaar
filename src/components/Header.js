@@ -9,7 +9,6 @@ import {
   DropdownButtonWrapper,
   Typography,
 } from "../elements";
-import { DropdownButton } from "../components";
 
 export const Header = ({ hideTitle, smallHeader }) => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -37,28 +36,28 @@ export const Header = ({ hideTitle, smallHeader }) => {
         <ul>
           <li>
             <NavLink onClick={() => setShowDropdown(false)} to="/">
-              <Typography type="h3" area="nav">
+              <Typography type="h3" area="nav" bold>
                 Home
               </Typography>
             </NavLink>
           </li>
           <li>
             <NavLink onClick={() => setShowDropdown(false)} to="/">
-              <Typography type="h3" area="nav">
+              <Typography type="h3" area="nav" bold>
                 About me
               </Typography>
             </NavLink>
           </li>
           <li>
             <NavLink onClick={() => setShowDropdown(false)} to="/">
-              <Typography type="h3" area="nav">
+              <Typography type="h3" area="nav" bold>
                 Contact
               </Typography>
             </NavLink>
           </li>
           <li>
             <NavLink onClick={() => setShowDropdown(false)} to="/">
-              <Typography type="h3" area="nav">
+              <Typography type="h3" area="nav" bold>
                 Sign up
               </Typography>
             </NavLink>

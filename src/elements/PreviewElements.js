@@ -53,7 +53,7 @@ export const ColorGapFiller = styled.div`
     grid-row: 1 / 2;
   }
 
-  background-color: ${({ theme }) => theme.colors.backgroundGrey};
+  background-color: ${({ theme }) => theme.colors.primaryLight};
 `;
 
 /*
