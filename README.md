@@ -5,23 +5,20 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby's hello-world starter
+  How to use this Gatsby site and my conclusion about the webbdevelopment techniques for building dynamic webpages
 </h1>
 
-Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+**Clone the Github repo and install the Gatsby site.**
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+    Go via your command line to your project folder where you want to install this project.
 
-## 🚀 Quick start
+    Write:
 
-1.  **Create a Gatsby site.**
+    Gatsby new [give the folder a name!] https://github.com/EricvandenOutenaar/tenta-eric-van-den-outenaar.git && cd [the name of your new folder] && code .
 
-    Use the Gatsby CLI to create a new site, specifying the hello-world starter.
+    This will clone my repo into your folderm install this gatsby project and open up visual studio code. If you don't use Visual Studio forget the code . part of the commando and just open the project via your code editor.
 
-    ```shell
-    # create a new Gatsby site using the hello-world starter
-    gatsby new my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello-world
-    ```
+    Once your code editor opens, run Gatsby develop to start the development server and show to site on your local host port in your browser. If you for what reason would encounter problems. Please run a gatsby clean followed by an npm install from the terminal to make sure all the packages from the JSON files are correctly installed.
 
 1.  **Start developing.**
 
