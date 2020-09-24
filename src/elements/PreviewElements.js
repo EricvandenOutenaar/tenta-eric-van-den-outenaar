@@ -8,7 +8,7 @@ export const FeaturedPreviewWrapper = styled.article`
   width: 100;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(16, 1.5rem);
+  grid-template-rows: repeat(18, 1.5rem);
   gap: 0 1rem;
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
@@ -27,8 +27,10 @@ export const FeaturedPreviewImageWrapper = styled.div`
 `;
 // note: I set overflow to hidden to deal with overflow problem on small screen sizes...
 export const FeaturedPreviewContent = styled.div`
-  grid-column: 2 / 6;
-  grid-row: 9 / 17;
+  grid-column: 1 / 7;
+  grid-row: 8 / 19;
+  padding: 0 ${({ theme }) => theme.spacings.medium};
+  margin: 0 ${({ theme }) => theme.spacings.medium};
   z-index: 10;
   overflow: hidden;
   padding: ${({ theme }) => theme.spacings.medium};
@@ -38,6 +40,10 @@ export const FeaturedPreviewContent = styled.div`
   p,
   h2 {
     padding: ${({ theme }) => theme.spacings.extraSmall} 0;
+  }
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    grid-column: 2 / 6;
+    grid-row: 9 / 17;
   }
   @media ${({ theme }) => theme.breakpoints.desktop} {
     grid-column: 13 / 21;
