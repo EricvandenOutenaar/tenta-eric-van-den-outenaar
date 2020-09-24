@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import { ThemeContext } from "styled-components";
 
 import {
   HeaderWrapper,
@@ -19,6 +20,8 @@ import {
   of a toggle state works in a React component.      
 */
 export const Header = ({ hideTitle, smallHeader }) => {
+  // Here we can use the useContext hook to get access to our theme...
+  const theme = useContext(ThemeContext);
   const [showDropdown, setShowDropdown] = useState(false);
 
   const data = useStaticQuery(graphql`
@@ -26,7 +29,7 @@ export const Header = ({ hideTitle, smallHeader }) => {
       logo: file(relativePath: { eq: "logo.svg" }) {
         publicURL
       }
-      hamburger: file(relativePath: { eq: "bars-solid.svg" }) {
+      hamburger: file(relativePath: { eq: "hamburgerwhite.svg" }) {
         publicURL
       }
     }
@@ -35,7 +38,15 @@ export const Header = ({ hideTitle, smallHeader }) => {
     <HeaderWrapper smallHeader={smallHeader} dropdown={showDropdown}>
       <LogoBlogTitleWrapper hideTitle={hideTitle}>
         <img src={data.logo.publicURL}></img>
-        <Typography type="h1" area="header" italic size="large">
+        <Typography
+          type="h1"
+          area="header"
+          italic
+          size="large"
+          style={{
+            margin: `${theme.spacings.large} 0 0 ${theme.spacings.large}`,
+          }}
+        >
           Travel Blog
         </Typography>
       </LogoBlogTitleWrapper>
@@ -70,13 +81,19 @@ export const Header = ({ hideTitle, smallHeader }) => {
             </NavLink>
           </li>
         </ul>
+        <DropdownControlWrapper
+          dropdown={showDropdown}
+          onClick={() => setShowDropdown(!showDropdown)}
+        >
+          {showDropdown ? (
+            <Typography size="large" area="header">
+              X
+            </Typography>
+          ) : (
+            <img src={data.hamburger.publicURL}></img>
+          )}
+        </DropdownControlWrapper>
       </NavWrapper>
-      <DropdownControlWrapper
-        dropdown={showDropdown}
-        onClick={() => setShowDropdown(!showDropdown)}
-      >
-        {showDropdown ? "X" : <img src={data.hamburger.publicURL}></img>}
-      </DropdownControlWrapper>
     </HeaderWrapper>
   );
 };

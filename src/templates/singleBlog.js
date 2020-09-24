@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { MainContentContainer, Layout, Blog,Seo } from "../components";
+import { MainContentContainer, Layout, Blog, Seo } from "../components";
 
 const singleBlog = ({ data }) => {
   const featureImage = data.mdx.frontmatter.featureImage.childImageSharp.fixed;
@@ -38,7 +38,7 @@ export const pageQuery = graphql`
     mdx(id: { eq: $id }) {
       body
       frontmatter {
-        date
+        date(formatString: "MMMM DD, YYYY")
         excerpt
         slug
         title

@@ -39,7 +39,7 @@ export const FeaturedPreviewContent = styled.div`
 
   p,
   h2 {
-    padding: ${({ theme }) => theme.spacings.extraSmall} 0;
+    padding: ${({ theme }) => theme.spacings.small} 0;
   }
   @media ${({ theme }) => theme.breakpoints.tablet} {
     grid-column: 2 / 6;

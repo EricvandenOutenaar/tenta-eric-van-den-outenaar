@@ -1,6 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { FooterWrapper, FooterSocialIcons } from "../elements";
+import { FooterWrapper, FooterSocialIcons, Typography } from "../elements";
 
 export const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -48,7 +48,9 @@ export const Footer = () => {
           <img src={data.instagram.publicURL} alt="Instagram logo" />
         </a>
       </FooterSocialIcons>
-      <p>© 2020 Blog Company. All right reserved.</p>
+      <Typography area="footer">
+        © 2020 Blog Company. All right reserved.
+      </Typography>
     </FooterWrapper>
   );
 };

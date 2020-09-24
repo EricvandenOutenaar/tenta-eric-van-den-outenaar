@@ -40,14 +40,8 @@ const getTypographyElement = ({ type, props }) => {
 export const Typography = styled(props =>
   getTypographyElement({ type: props.type, props })
 )`
-  margin: ${({ theme: { spacings }, area = "-" }) =>
-      area === "header" ? spacings.large : "0"}
-    0 0
-    ${({ theme: { spacings }, area = "-" }) =>
-      area === "header" ? spacings.large : "0"};
   font-size: ${({ theme, type = "p", size = "normal" }) =>
     theme.fontSize[type][size]};
-
   font-style: ${({ italic }) => italic && "italic"};
   font-weight: ${({ theme: { fontWeight }, bold }) =>
     bold ? fontWeight.bold : fontWeight.normal};
@@ -65,7 +59,7 @@ export const Typography = styled(props =>
       case "blog":
         return colors.onBackgroundPaper;
       case "footer":
-        return colors.onBackground;
+        return colors.onPrimary;
       default:
         return colors.onBackgroundPaper;
     }

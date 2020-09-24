@@ -16,7 +16,6 @@ import { Link } from "gatsby";
 export const HeaderWrapper = styled.header`
   background-color: ${({ theme }) => theme.colors.primaryLight};
   padding: ${({ theme }) => theme.spacings.small};
-  color: ${({ theme }) => theme.colors.onBackground};
   grid-column-start: 1;
   grid-column-end: 7;
   grid-row: 1 / ${({ dropdown }) => (dropdown ? 20 : 2)};
@@ -40,6 +39,7 @@ export const LogoBlogTitleWrapper = styled.div`
   display: none;
   img {
     width: 5rem;
+    filter: invert(70%);
   }
   @media ${({ theme }) => theme.breakpoints.desktop} {
     display: block;
@@ -59,6 +59,7 @@ export const LogoBlogTitleWrapper = styled.div`
   to be pushed to the left and the navbar be positioned from approximately the center to the right.   
 */
 export const NavWrapper = styled.nav`
+  position: relative;
   padding: ${({ theme: { spacings } }) => spacings.large};
   flex-grow: 1;
   ul {
@@ -67,6 +68,9 @@ export const NavWrapper = styled.nav`
     list-style: none;
     justify-content: space-between;
     align-items: ${({ dropdown }) => dropdown && "center"};
+  }
+  li {
+    margin: ${({ theme }) => theme.spacings.large} 0;
   }
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
@@ -89,8 +93,17 @@ export const NavLink = styled(props => <Link {...props} />)`
 
 // This will a wrapper for our 'on/off switch' of the dropdown menu
 export const DropdownControlWrapper = styled.button`
-  width: 2rem;
-  height: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: ${({ theme }) => theme.colors.primaryLight};
+  width: 3rem;
+  height: 3rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
     display: none;

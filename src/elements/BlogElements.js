@@ -32,44 +32,44 @@ export const BlogWrapper = styled.div`
   }
 
   h1 {
-    font-size: 2.25rem;
+    font-size: ${({ theme }) => theme.fontSize.h1.normal};
     line-height: 2.5rem;
-    font-weight: 400;
+    font-weight: ${({ theme }) => theme.fontWeight.normal};
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: ${({ theme }) => theme.fontSize.h2.normal};
     line-height: 1.875rem;
-    font-weight: 400;
+    font-weight: ${({ theme }) => theme.fontWeight.normal};
   }
 
   h3 {
-    font-size: 1.375rem;
+    font-size: ${({ theme }) => theme.fontSize.h3.normal};
     line-height: 1.625rem;
-    font-weight: 700;
+    font-weight: ${({ theme }) => theme.fontWeight.bold};
   }
 
   h4 {
-    font-size: 1.25rem;
+    font-size: ${({ theme }) => theme.fontSize.h4.normal};
     line-height: 1.5rem;
-    font-weight: 400;
+    font-weight: ${({ theme }) => theme.fontWeight.normal};
   }
 
   h5 {
-    font-size: 1.125rem;
+    font-size: ${({ theme }) => theme.fontSize.h5.normal};
     line-height: 1.375rem;
-    font-weight: 700;
+    font-weight: ${({ theme }) => theme.fontWeight.bold};
   }
 
   h6 {
-    font-size: 1rem;
+    font-size: ${({ theme }) => theme.fontSize.h6.normal};
     line-height: 1.125rem;
-    font-weight: 700;
+    font-weight: ${({ theme }) => theme.fontWeight.bold};
     text-transform: uppercase;
   }
 
   p {
-    font-size: 1.125rem;
+    font-size: ${({ theme }) => theme.fontSize.p.normal};
     line-height: 1.875rem;
     font-weight: 400;
     color: ${props => props.theme.colors.dark2};

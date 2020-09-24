@@ -6,12 +6,15 @@ import { BlogWrapper, Typography } from "../elements";
 const imageStyle = {
   width: "100%",
   display: "block",
+  height: "20rem",
 };
 // I have put the MDX renderer in the blog component, to keep the single blog template 'cleaner'
 export const Blog = ({ date, title, excerpt, fixed, article }) => {
   return (
     <BlogWrapper>
-      <Typography type="h1">{title}</Typography>
+      <Typography size="large" type="h1">
+        {title}
+      </Typography>
       <Typography type="p">{date}</Typography>
       <Img fixed={fixed} style={imageStyle} />
       <Typography>{excerpt}</Typography>
