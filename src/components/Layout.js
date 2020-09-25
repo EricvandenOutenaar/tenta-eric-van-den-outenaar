@@ -2,7 +2,7 @@ import React from "react";
 import { LayoutWrapper } from "../elements";
 import { Header, Footer } from "../components";
 
-// In this component will hold the overall grid layout
+// This component servers as the overall grid layout for the pages
 
 export const Layout = ({ children, hideTitle, smallHeader }) => {
   return (

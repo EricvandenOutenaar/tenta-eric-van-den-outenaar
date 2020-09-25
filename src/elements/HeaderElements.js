@@ -3,15 +3,12 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 
 /*
-  This file contains all the styling components that can be found in the header.
-  I have have created a props called dropdown to manipulate the header background on mobile screens.
-  When a user clicks on the hamburger menu icon the value becomes true and grid row end number changes,
-  and the component will rerender with the new style, providing a background for the 
-  collapsed dropdown list with menu items.  
-  In addition to the ternary operator, I like to use the logical And operator (&&). 
-  The && operator allows for shorter code. It functions like an if-statement (if true do this). 
-  In combination with this kind of dynamic setting of css properties, this works well. The property simply 
-  doesn't get set if your it isn't true.    
+  This file contains all styling components in the header (including nav). 
+  The props 'dropdown' is needed to manipulate the dropdown-menu-styling.
+  The smallheader-prop is used to have the option set the header 
+  to a slightly smaller height. In addition to the ternary operator, 
+  I use the logical And operator (&&). The && operator allows for shorter code.  
+  I also destruct props in the function head whenever I can.  
 */
 export const HeaderWrapper = styled.header`
   background-color: ${({ theme }) => theme.colors.primaryLight};
@@ -29,11 +26,10 @@ export const HeaderWrapper = styled.header`
   }
 `;
 /*
-  I am wrapping my logo and blog headline in one wrapper 
-  I consideren putting the logo actually in the navbar, but since 
-  my logo doesn't have navigation functionality I've kept it out of the navbar. 
-  I have created a prop called hide title, because I want the attention drawing headline 
-  to be visible only on the landing page but not on the individual blog pages.
+  I am wrapping the logo and the blog headline in one wrapper. Since 
+  my logo doesn't have navigation functionality I've dediced to keep it 
+  out of the navbar. I have created a prop called hide title, because I want 
+  the headline not to be visible on the individual blog pages.
 */
 export const LogoBlogTitleWrapper = styled.div`
   display: none;
@@ -51,12 +47,13 @@ export const LogoBlogTitleWrapper = styled.div`
   }
 `;
 /*
-  In the navwrapper, I set the list to display flex and the li items
-  become flex items. I change the flex direction from the default row 
-  to column in order to create the dropdown menu functionality. 
-  The NavWrapper itself is also a flex item in the header wrapper. I have set it to 
-  flex grow 1 so it will take up all the remaing space. I want the LogoBlogTitleWrapper
-  to be pushed to the left and the navbar be positioned from approximately the center to the right.   
+  In the navwrapper, I set the list to display flex and the li-items
+  become flex items. Flex direction changes from the default 'row' 
+  to 'column' when dropdown is true.  
+  The NavWrapper itself is also a flex item in the header wrapper. 
+  I have set it to flex grow 1 so it will take up all the remaing space. 
+  I want the LogoBlogTitleWrapper to be pushed to the left and 
+  the navbar be positioned from approximately the center to the right.   
 */
 export const NavWrapper = styled.nav`
   position: relative;
@@ -85,13 +82,17 @@ export const NavWrapper = styled.nav`
   }
 `;
 
-// I've created a custom Link wrapper to wrap the li items in the navbar.
+// I've created a custom Link wrapper to wrap the li-items in the navbar.
 export const NavLink = styled(props => <Link {...props} />)`
   color: ${({ theme }) => theme.colors.onBackground};
   text-decoration: none;
 `;
 
-// This will a wrapper for our 'on/off switch' of the dropdown menu
+/* 
+  This will function as wrapper for our toggle functionality
+  The wrapper is an flex item of the Navwrapper, but we position it
+  to the top right corner.   
+*/
 export const DropdownControlWrapper = styled.button`
   position: absolute;
   top: 0;

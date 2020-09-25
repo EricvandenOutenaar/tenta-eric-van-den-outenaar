@@ -12,15 +12,12 @@ import {
 } from "../elements";
 
 /*
-  In the header component there I quite some properties to play with. I have built in the option
-  to show a smaller/thinner version of the header (prop is set in Single blog template , passed through the Layout component 
-  down to this component where it is passed to the HeaderWrapper). In the same manner, the hideTitle prop is set.
-  In addition, I have created functionality for a very simple hamburger/dropdown menu. I haven't looked at the exemples
-  you posted on Slack, but used my previous knowlegde of the React usestate hook and how the handling
-  of a toggle state works in a React component.      
+  I have created functionality for a very simple hamburger/dropdown menu. I haven't looked at the exemples
+  posted on Slack, but used my previous experience with the React useState hook.
+  In addition, I have set all the navlinks to just link to the homepage for now...      
 */
 export const Header = ({ hideTitle, smallHeader }) => {
-  // Here we can use the useContext hook to get access to our theme...
+  // Here we can use Reacts useContext hook to get access to our theme...
   const theme = useContext(ThemeContext);
   const [showDropdown, setShowDropdown] = useState(false);
 

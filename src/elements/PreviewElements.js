@@ -1,9 +1,17 @@
 import styled from "styled-components";
 
-// this serves as a wrapper for the preview of the featured article in main
-// export const FeaturedCWrapper = styled.section``;
+/*
+  This file holds all the elements that are not full blog articles, but function
+  as preview (on the landing page) for those articles. 
+*/
 
-// the featured article will be a grid item for an image and a content card
+/* 
+  This wrapper holds the so called featured preview article (opening
+  preview article on the landing page).
+  I set it to relatively small columns (on desktop) and rows 
+  in order to be able to precisely place one of its items slightly
+  on top of the other (to create a layered effect here as well).   
+*/
 export const FeaturedPreviewWrapper = styled.article`
   width: 100;
   display: grid;
@@ -16,7 +24,7 @@ export const FeaturedPreviewWrapper = styled.article`
     grid-template-rows: repeat(12, 2.5rem);
   }
 `;
-
+// Grid item one is the image holder
 export const FeaturedPreviewImageWrapper = styled.div`
   grid-column: 1 / 7;
   grid-row: 1 / span 12;
@@ -25,7 +33,7 @@ export const FeaturedPreviewImageWrapper = styled.div`
     grid-row: 1 / span 12;
   }
 `;
-// note: I set overflow to hidden to deal with overflow problem on small screen sizes...
+// The second grid item is the contentholder
 export const FeaturedPreviewContent = styled.div`
   grid-column: 1 / 7;
   grid-row: 8 / 19;
@@ -50,7 +58,7 @@ export const FeaturedPreviewContent = styled.div`
     grid-row: 3 / 11;
   }
 `;
-
+// I ended up with a 'gap' in the . I  
 export const ColorGapFiller = styled.div`
   display: none;
   @media ${({ theme }) => theme.breakpoints.desktop} {

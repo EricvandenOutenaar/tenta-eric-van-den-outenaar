@@ -1,13 +1,10 @@
 import styled from "styled-components";
 
 /*
-  Here we'll define the layout, which serves as a container for the header, main and footer. 
-  We'll define the main grid and develop the site mobile first. 
-  On mobile we'll just have 6 columns that each take up an even fraction of the available space.
-  On tablet we'll stick to 6 columns, but we'll create some horizontal gutters. 
-  On desktop we'll have 12 columns to work with. We'll just have them each take up an even amount of space.    
-  I have set a max width to the layout container to prevent the content from streching out on very large screens
-  In addition, I have added a little bit of padding on the top/bottom and on the sides. 
+  Here we'll define the layout, which serves as the container for the header, main, the footer 
+  and other possible child components. I have tried to defined the styles with the idea of 
+  mobile first in mind. I have also set a max width to the layout container to prevent the content from
+  streching out too much on very large screens.
 */
 
 export const LayoutWrapper = styled.div`
