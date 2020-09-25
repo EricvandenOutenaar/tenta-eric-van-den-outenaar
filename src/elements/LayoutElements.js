@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 /*
-  Here we'll define the layout, which serves as the container for the header, main, the footer 
-  and other possible child components. I have tried to defined the styles with the idea of 
-  mobile first in mind. I have also set a max width to the layout container to prevent the content from
+  Here I'll define the style of the layout, 
+  which serves as the container of the page. 
+  I have tried to defined the styles with 
+  mobile first in mind. I have also set a max width 
+  to the layout container to prevent the content from
   streching out too much on very large screens.
 */
 

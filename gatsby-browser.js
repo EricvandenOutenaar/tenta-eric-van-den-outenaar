@@ -6,6 +6,8 @@ import { preToCodeBlock } from "mdx-utils";
 import { Table, Code } from "./src/components";
 import "./language-tabs.css";
 
+// Similar to the class project
+
 const components = {
   table: Table,
   pre: preProps => {

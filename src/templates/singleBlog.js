@@ -2,6 +2,8 @@ import React from "react";
 import { graphql } from "gatsby";
 import { MainContentContainer, Layout, Blog, Seo } from "../components";
 
+// Template for the single blog pages
+
 const singleBlog = ({ data }) => {
   const featureImage = data.mdx.frontmatter.featureImage.childImageSharp.fixed;
   const seoImage = data.mdx.frontmatter.featureImage.publicURL;

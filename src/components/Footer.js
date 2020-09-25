@@ -2,6 +2,10 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { FooterWrapper, FooterSocialIcons, Typography } from "../elements";
 
+/*
+ Here, I have placed the FooterSocialIcons and copyright text
+ in the Footerwrapper.
+*/
 export const Footer = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -49,7 +53,7 @@ export const Footer = () => {
         </a>
       </FooterSocialIcons>
       <Typography area="footer">
-        © 2020 Blog Company. All right reserved.
+        © 2020 Blog Company. All rights reserved.
       </Typography>
     </FooterWrapper>
   );

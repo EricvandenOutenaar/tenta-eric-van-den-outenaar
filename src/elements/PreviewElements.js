@@ -58,7 +58,12 @@ export const FeaturedPreviewContent = styled.div`
     grid-row: 3 / 11;
   }
 `;
-// I ended up with a 'gap' in the . I  
+/*
+ I ended up with a 'gap' in the grid, so I thought. 
+ So I created a div just to set the background color of that gap.
+ I see now that I actually don't need this trick. 
+ I will remove this styled component in a later moment. 
+ */
 export const ColorGapFiller = styled.div`
   display: none;
   @media ${({ theme }) => theme.breakpoints.desktop} {
@@ -71,23 +76,34 @@ export const ColorGapFiller = styled.div`
 `;
 
 /*
-this serves as a wrapper for the list of previewed blog articles in the main element 
-on the homepage
-*/
-// export const PreviewWrapper = styled.section`
-//   display: flex;
-//   flex-wrap: wrap;
-// `;
+    This serves as a wrapper container for the list of previewed blog articles 
+    on the homepage. I have made this a section to 'seperate' it semantically 
+    from the FeaturedPreview Blog. 
+  */
+export const BlogPreviewContainerWrapper = styled.section`
+  margin: ${({ theme }) => theme.spacings.extraLarge} auto;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+`;
 
 /* 
-A preview article will consist out of an image, a header a topics icon, which 
-will be a link to related blogs, an intro text (excerpt) and a show more button. 
+  A preview blog article will consist out of an image, a header, 
+  an intro text (excerpt) and a 'show more'-button. 
+  On mobile, the articles will just take up the full width of the parent. 
+  I set the margin left/right to auto to center items that are not full width.
 */
 export const BlogPreviewWrapper = styled.article`
   width: 100%;
+  margin: 0 0 ${({ theme }) => theme.spacings.extraLarge} 0;
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    width: 90%;
+    margin: 0 auto ${({ theme }) => theme.spacings.extraLarge};
+  }
   @media ${({ theme }) => theme.breakpoints.desktop} {
     width: 50%;
-    margin: ${({ theme }) => theme.spacings.large} auto 0;
+    margin: ${({ theme }) => theme.spacings.extraLarge} auto 0;
     padding: ${({ theme }) => theme.spacings.large}
       ${({ theme }) => theme.spacings.extraLarge};
   }
@@ -102,10 +118,4 @@ export const BlogPreviewWrapper = styled.article`
     top: 0;
     left: 0;
   }
-`;
-export const BlogPreviewContainerWrapper = styled.section`
-  margin: ${({ theme }) => theme.spacings.extraLarge} auto;
-  width: 90%;
-  display: flex;
-  flex-wrap: wrap;
 `;

@@ -6,7 +6,10 @@ import Img from "gatsby-image";
 const imageStyle = {
   width: "100%",
 };
-
+/* 
+  This component holds a blog preview and is 
+  a flex item in the blog preview container.
+*/
 export const BlogPreview = ({ date, title, excerpt, slug, featureImage }) => {
   return (
     <BlogPreviewWrapper>

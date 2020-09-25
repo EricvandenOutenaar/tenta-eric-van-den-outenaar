@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
+// I this component I have tried to create my own custom Typography component
+
 /*
- I created a helper function, which returns an element
+ This helper function, returns an element.
  The default element of our typography component will be a p-element.  
- */
+*/
 const getTypographyElement = ({ type, props }) => {
   switch (type) {
     case "p":
@@ -27,15 +29,13 @@ const getTypographyElement = ({ type, props }) => {
 };
 
 /* 
- Here I have defined a styled typography component mainly based on a provided prop called 'type'.
- I have created the option
- to easily set an italic fontstyle by passing in a boolean called italic. In addition, I have created
- the option to set the font weight to bold and to manipulate the fontsize. By giving the type and size
- props default values, we take into account that the user of our Typography component doesn't have to define certain values.
- In this case the default type is a p element and the default size is normal. If no props are provided our component 
- will reference ket value pair in the theme.js file associated with normal font size of the p element.   
- I also created logic for changing the color based on the background area. In addition, I have also built in the option to pass
- in any other inline styles through to the component. 
+ Here I have defined my custom typography component. 
+ Depending on the 'type' prop we will create a specific element. 
+ I have created several props to play with some custom settings. 
+ I take into account that the user of the Typography component 
+ doesn't have to define the values. In addition, 
+ I have also made sure to pass inline styles 
+ through to the css of the html-element. 
 */
 export const Typography = styled(props =>
   getTypographyElement({ type: props.type, props })

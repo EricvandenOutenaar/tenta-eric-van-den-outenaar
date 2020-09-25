@@ -1,6 +1,7 @@
 import React from "react";
 import { PaginationWrapper, PaginationElement } from "../elements";
 
+// I have taken this component from our class project
 export const Pagination = ({ isFirst, isLast, prevPage, nextPage }) => {
   return (
     <PaginationWrapper isFirst={isFirst} isLast={isLast}>

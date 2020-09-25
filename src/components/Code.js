@@ -2,6 +2,7 @@ import React from "react";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import theme from "prism-react-renderer/themes/vsDark";
 
+// I have taken this from our project - it helps to visualize different code types
 export const Code = ({ codeString, language, ...props }) => {
   return (
     <Highlight

@@ -2,6 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 
+/*
+  This component I have simply taken from our project 
+  and fit it into this website. I haven't styled it. 
+*/
 export const PaginationWrapper = styled.div`
   grid-column: 1 / span 7;
   grid-row: 21 /23;
@@ -15,14 +19,18 @@ export const PaginationWrapper = styled.div`
   }
   a:nth-child(1) {
     color: ${props =>
-      props.isFirst ? props.theme.colors.dark3 : props.theme.colors.dark1};
+      props.isFirst
+        ? props.theme.colors.secondaryLight
+        : props.theme.colors.secondaryDark};
     pointer-events: ${props => (props.isFirst ? "none" : "auto")};
     cursor: ${props => (props.isFirst ? "default" : "pointer")};
   }
 
   a:nth-child(2) {
     color: ${props =>
-      props.isLast ? props.theme.colors.dark3 : props.theme.colors.dark1};
+      props.isLast
+        ? props.theme.colors.secondaryLight
+        : props.theme.colors.secondaryDark};
     pointer-events: ${props => (props.isLast ? "none" : "auto")};
     cursor: ${props => (props.isLast ? "default" : "pointer")};
   }

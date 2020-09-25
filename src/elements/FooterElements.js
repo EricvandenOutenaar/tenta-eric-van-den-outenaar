@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-// I have given the footer some margin on top and bottom, to push it away from MainContentContainer and create bottom space
+/*
+  I have given the footer some margin on top and bottom,
+  to push it away from MainContentContainer and create bottom space.
+  I have also aligned and 'justified' the items differently depending on the view. 
+*/
 export const FooterWrapper = styled.footer`
   grid-column: 1 / 7;
   grid-row: 23;
@@ -31,7 +35,7 @@ export const FooterSocialIcons = styled.div`
   img:focus {
     filter: brightness(50%);
   }
-  @media ${({ theme }) => theme.breakpoints.tablet} {
+  @media ${({ theme }) => theme.breakpoints.desktop} {
     margin: 0;
   }
 `;

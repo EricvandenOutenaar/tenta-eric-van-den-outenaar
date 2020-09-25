@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
-/* 
-  from tablet breakpoint and up I decreased the width of the blog wrapper and
-  set margin to auto, in order to keep the container centered
+/*
+  This component wraps a single blog post. 
+  From tablet breakpoint and up I decreased the width of the blog wrapper and
+  set margin to auto, in order to keep the container centered.
 */
 export const BlogWrapper = styled.div`
   width: 100%;

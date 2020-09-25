@@ -10,6 +10,8 @@ import {
   Pagination,
 } from "../components";
 
+// Template for the allblogs-pages.
+
 const allBlogs = ({ pageContext, data }) => {
   const { currentPage, numPages } = pageContext;
   const isFirst = currentPage === 1;
@@ -18,9 +20,6 @@ const allBlogs = ({ pageContext, data }) => {
   const nextPage = `/${currentPage + 1}`;
 
   const blogs = data.allMdx.edges;
-
-  // test
-  console.log(blogs);
 
   return (
     <Layout>

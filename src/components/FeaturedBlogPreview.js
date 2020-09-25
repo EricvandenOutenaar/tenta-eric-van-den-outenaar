@@ -15,6 +15,12 @@ const imageStyle = {
   height: "100%",
 };
 
+/*
+  This component holds the FeaturedBlogPreview,
+  which is the highlighted, eyecatching opening on the 
+  landing page. The component is the first block element 
+  in the MainContentContainer.
+*/
 export const FeaturedBlogPreview = ({
   featureImage,
   date,

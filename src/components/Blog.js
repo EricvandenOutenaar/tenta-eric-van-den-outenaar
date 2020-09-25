@@ -8,7 +8,10 @@ const imageStyle = {
   display: "block",
   height: "20rem",
 };
-// I have put the MDX renderer in the blog component, to keep the single blog template 'cleaner'
+/*
+  This component holds a sign blog post. 
+  I have put the MDX renderer in the blog component (to keep the template Single blog cleaner).
+*/
 export const Blog = ({ date, title, excerpt, fixed, article }) => {
   return (
     <BlogWrapper>
