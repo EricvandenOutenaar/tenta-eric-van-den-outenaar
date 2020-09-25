@@ -7,6 +7,7 @@ import styled from "styled-components";
 */
 export const BlogWrapper = styled.div`
   width: 100%;
+  padding: ${({ theme }) => theme.spacings.medium};
   background-color: ${({ theme }) => theme.colors.background};
 
   @media ${({ theme }) => theme.breakpoints.tablet} {

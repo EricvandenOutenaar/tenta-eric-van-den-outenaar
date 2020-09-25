@@ -34,7 +34,7 @@ export const Header = ({ hideTitle, smallHeader }) => {
   return (
     <HeaderWrapper smallHeader={smallHeader} dropdown={showDropdown}>
       <LogoBlogTitleWrapper hideTitle={hideTitle}>
-        <img src={data.logo.publicURL}></img>
+        <img src={data.logo.publicURL} alt="logo"></img>
         <Typography
           type="h1"
           area="header"
@@ -87,7 +87,7 @@ export const Header = ({ hideTitle, smallHeader }) => {
               X
             </Typography>
           ) : (
-            <img src={data.hamburger.publicURL}></img>
+            <img src={data.hamburger.publicURL} alt="Hamburger icon"></img>
           )}
         </DropdownControlWrapper>
       </NavWrapper>
