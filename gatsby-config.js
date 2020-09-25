@@ -9,9 +9,10 @@ module.exports = {
   siteMetadata: {
     title: "My travel blog",
     description: "A simple blog built with Gatsby and MDX",
-    url: "https://tenta-eric-van-den-outenaar.netlify.app/",
-    image:
+    url:
       "https://eric-vandenoutenaar-webbapplikationerochmobilutveckling.netlify.app/",
+    image:
+      "https://eric-vandenoutenaar-webbapplikationerochmobilutveckling.netlify.app/me-in-snow-svalbard.jpg",
     twitterUsername: "@EricOutenaar",
     author: "Eric van den Outenaar",
   },

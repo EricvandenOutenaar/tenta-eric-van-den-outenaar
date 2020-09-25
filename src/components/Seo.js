@@ -8,25 +8,26 @@ import { StaticQuery, graphql } from "gatsby";
 */
 
 export const Seo = ({ description, keywords, title, image, url, author }) => {
-  const site = "https://tenta-eric-van-den-outenaar.netlify.app/"
+  const site =
+    "https://eric-vandenoutenaar-webbapplikationerochmobilutveckling.netlify.app/";
 
   return (
     <StaticQuery
       query={detailsQuery}
       render={data => {
-        const twitterUser = data.site.siteMetadata.twitterUsername
+        const twitterUser = data.site.siteMetadata.twitterUsername;
         const metaDescription = description
           ? description
-          : data.site.siteMetadata.description
-        const metaTitle = title ? title : data.site.siteMetadata.title
-        const metaAuthor = author ? author : data.site.siteMetadata.author
-        const metaUrl = url ? url : data.site.siteMetadata.url
+          : data.site.siteMetadata.description;
+        const metaTitle = title ? title : data.site.siteMetadata.title;
+        const metaAuthor = author ? author : data.site.siteMetadata.author;
+        const metaUrl = url ? url : data.site.siteMetadata.url;
         const metaImage = image
           ? `${site}${image}`
-          : data.site.siteMetadata.image
+          : data.site.siteMetadata.image;
         const metaKeywords = keywords
           ? keywords
-          : ["gatsby blog", "My travel blog"]
+          : ["gatsby blog", "My travel blog"];
         return (
           <Helmet
             title={title}
@@ -88,11 +89,11 @@ export const Seo = ({ description, keywords, title, image, url, author }) => {
                 : []
             )}
           />
-        )
+        );
       }}
     />
-  )
-}
+  );
+};
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {
@@ -106,4 +107,4 @@ const detailsQuery = graphql`
       }
     }
   }
-`
+`;
