@@ -8,11 +8,11 @@ I have created a 'demo' Travel Blog for this assignment (actual places I have be
 
     Write:
 
-    Gatsby new [give the folder a name!] https://github.com/EricvandenOutenaar/tenta-eric-van-den-outenaar.git && cd [the name of that folder] && code .
+    gatsby new [give the folder a name!] https://github.com/EricvandenOutenaar/tenta-eric-van-den-outenaar.git && cd [the name of that folder] && code .
 
-    This will clone my repo into your folder, install this gatsby project and open up visual studio code. If you don't use Visual Studio forget the last part of the commando (code . ) and just open the project with your specific code editor.
+    This will clone my repo into your folder, install this gatsby project and open up Visual Studio Code. If you don't use Visual Studio forget the last part of the commando (code . ) and just open the project with your specific code editor.
 
-    Once your code editor opens, run Gatsby develop to start the development server and show to site on your local host in your browser. If you for some  reason would encounter problems. Please run a gatsby clean followed by an npm install from the terminal to make sure all the packages from the JSON files are correctly installed.
+    Once your code editor opens, run Gatsby develop to start the development server and open the site in your browser (local host). If you for some reason would encounter problems. Please run a 'gatsby clean' followed by an 'npm install' from the terminal to make sure all the packages from the JSON files are correctly installed.
 
 2.  **Mina slutsatser**
 
